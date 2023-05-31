@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/background01.png) no-repeat;
+    background-size: cover;    
+    background-position: center;
+}
+#totalPage{
+    width: 450px;;
+    height: 250px;
+    margin: auto; 
+    padding-top: 8%;
+}
+#container1{
+    float: left;
+}
+#container2{
+    float: right;
+}
+h4{
+    margin: 10px;
+}
+
+
+/* LOGIN */
+#formLogin{
+    text-align: center;  
+    align-items: center;
+    border: solid 1px wheat;
+    border-radius: 30px 0px 0px 30px;
+    padding: 5%;
+    width: 200px;
+    height: 350px;
+    background:rgba(20, 20, 20, 0.9);
+    color:  wheat;
+    box-shadow: 0 0 20px 0.5px  wheat;
+}
+#formLogin input[type=text]{
+    text-align: center;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    height: 30px;
+}
+
+#formLogin input[type=text]::placeholder{
+    outline: none;
+    border: none;
+    color:rgba(200, 0, 100, 0.5);
+}
+
+#formLogin input[type=password]{
+    text-align: center;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    height: 30px;
+}
+
+#formLogin input[type=password]::placeholder{
+    outline: none;
+    color:rgba(200, 0, 100, 0.5);
+}
+#formLogin input[type=submit]{
+    margin: 10px;
+    width: 70px;
+    outline: none;
+    border: solid 1px  wheat;
+    border-radius: 20px;
+    background-color:black;     
+    color:  wheat;
+    height: 30px;
+}
+#formLogin input[type=submit]:hover{
+    box-shadow: 0 0 20px 0.5px  wheat;
+}
+
+/* LOGIN TERMINA */
+/* CADASTRO */
+
+#formCadastro{   
+    text-align: center;  
+    align-items: center; 
+    border: solid 1px  wheat;
+    border-radius: 0px 30px 30px 0px;
+    padding: 5%;
+    width: 200px;
+    height: 350px;
+    background:rgba(20, 20, 20, 0.9);
+    color:  wheat;
+    box-shadow: 0 0 20px 0.5px  wheat;
+}
+#formCadastro input[type=text]{
+    text-align: center;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    height: 30px;
+}
+
+#formCadastro input[type=text]::placeholder{
+    outline: none;
+    border: none;
+    color:rgba(200, 0, 100, 0.5);
+}
+
+#formCadastro input[type=password]{
+    text-align: center;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    height: 30px;
+}
+
+#formCadastro input[type=password]::placeholder{
+    outline: none;
+    color:rgba(200, 0, 100, 0.5);
+}
+#formCadastro input[type=submit]{
+    margin: 10px;
+    width: auto;
+    outline: none;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color:black;    
+    color:wheat;
+    height: 30px;
+}
+#formCadastro input[type=submit]:hover{  
+    box-shadow: 0 0 20px 0.5px  wheat;
+}
+
+

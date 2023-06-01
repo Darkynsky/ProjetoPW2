@@ -2,27 +2,19 @@
 <div class="conteudo">
     <div class="container">
         <div class="tb_exibeGeneros">
+            <?php
+                    $stmt = $pdo->prepare("select * from tb_genero");	
+                    $stmt ->execute();
+        
+                    while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
+            ?>
             <div class="tb_exibeGeneroIMG">
-                <a>TERROR</a><br/>
-                <img src="../img/capas_generos/terror.png">
+                <?php echo $row[1]; ?>        
+                <img src="<?php echo $row[2]; ?>" />   
             </div>
-            <div class="tb_exibeGeneroIMG">
-                <a>COMÉDIA</a><br/>
-                <img src="../img/capas_generos/comedia.png">
-            </div>
-            <div class="tb_exibeGeneroIMG">
-                <a>AÇÃO</a><br/>
-                <img src="../img/capas_generos/acao.png">
-            </div>
-            <div class="tb_exibeGeneroIMG">
-                <a>FICÇÃO</a><br/>
-                <img src="../img/capas_generos/ficcao.png">
-            </div>
-            <div class="tb_exibeGeneroIMG">
-                <a>ROMANCE</a><br/>
-                <img src="../img/capas_generos/romance.png">
-            </div>
+            <?php }	?>
         </div>
     </div>
 </div>
+
 <?php include("elementos_da_pagina/rodape.php") ?>

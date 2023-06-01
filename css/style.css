@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Broadway;
+    src: url(../font/Broadway.ttf);
+}
+
+
+
 body{
     margin: auto;
     background-color: black;
@@ -25,6 +32,7 @@ button:hover{
     background: linear-gradient(wheat,white,wheat);
     color: black;
     box-shadow: 0 0 20px 0.5px  white;
+    transition: 1.6s;
 }
 
 #menuTop{
@@ -35,7 +43,10 @@ button:hover{
     box-shadow: 0 0 20px 0.5px  wheat;
 }
 .conteudo{   
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .container{
     text-align: center;  
@@ -43,19 +54,45 @@ button:hover{
     padding: 5%;  
     color: wheat; 
 }
+
+/* FOOTER */
+ footer{
+    bottom:0;
+    left:0;
+ }
+
+
+/* DESCRIÇÃO HOVER */
+
+.descricao{
+    position: relative;
+    
+}
+
+/* FIM DESCRIÇÃO HOVER*/
+
+
 /* PAGINA DE GENEROS */
 .tb_exibeGeneroIMG{
+    cursor: pointer;
     border-radius: 15px;
-    border: solid 1px wheat;
-    margin-left: 10px;
-    font-size: 20px;
+    border: solid 3px wheat;
+    margin: 10px;
+    font-size: 19px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     width: 200px;
     height: 323px;
     float: left;
-    background-color: rgb( 100, 0, 0);
+    background-color: rgb(100, 0, 0);
+    transition: 1.5s;
 }
 .tb_exibeGeneroIMG:hover{    
     color: white;
+    text-shadow: 0 0 1em rgba(0, 0, 0, 0.5), 0 0 0.25em currentColor;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-color: aliceblue;
+    transition: 1.5s;
     box-shadow: 0 0 20px 0.5px  white;
 }
 .tb_exibeGeneroIMG img{
@@ -63,9 +100,93 @@ button:hover{
     width: 200px;
     height: 300px;
 }
+.tb_exibeGeneroIMG img:hover{
+    /* filter: brightness(10%); */
+    transition: 1.5s;
+}
+    
 /* FIM PAGINA DE GENEROS*/
 
+/*    PÁGINA HOME    */
+
+
+.containerCentral{
+    display: block;
+    
+
+}
+
+.tb_exibeHomeIMG{
+    border-radius: 15px;
+    border: solid 1px rgb(100, 0, 0);
+    margin: 10px;
+    font-size: 19px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    width: 200px;
+    height: 323px;
+    float: left;
+    background-color: rgb(100, 0, 0);
+    transition: 1.5s;
+    
+}
+
+.tb_exibeHomeIMG:hover{    
+    color: white;
+    text-shadow: 0 0 1em rgba(0, 0, 0, 0.5), 0 0 0.25em currentColor;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-color: aliceblue;
+    transition: 1.5s;
+    
+}
+.tb_exibeHomeIMG img{
+    border-radius: 0px 0px 15px 15px;
+    width: 200px;
+    height: 300px;
+    transition: 1s;
+}
+.tb_exibeHomeIMG img:hover{ 
+    filter: brightness(10%);
+    transition: 1s;
+}
+
+.bannerContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+
+
+/* FIM PÁGINA HOME */
+
 /* PAGINA GERENCIAR FILMES*/
+
+/* ADD GENERO */
+#containerGeneroAdd{
+    border-radius: 15px;
+    height: 60px;
+    width: 600px;
+    background-color: rgb( 100, 0, 0);
+    color: wheat;
+    border: solid 1px wheat;
+    margin-left: auto;
+    margin-right: auto;
+}
+.campTextGenero{
+    border-radius: 15px;
+    height: 25px;
+    width: 150px;
+    background-color: black;
+    color: wheat;
+    outline: none;
+    border: solid 1px wheat;
+
+}
+
+/* FIM ADD GENERO*/
+
+
 #gerenciadorFilmes{    
     margin-top: 20px;
     width: 1016px;
@@ -74,8 +195,8 @@ button:hover{
     margin-right: auto; 
 }
 /* FORMULARIO ADD FILME */
-
-#addFilme{    
+#addFilme{
+    border-radius: 15px;    
     margin: 3px;   
     float: left;
     width: 500px;
@@ -84,16 +205,13 @@ button:hover{
     border: solid 1px wheat;
 }
 .campText{
+    border-radius: 15px;
     width: 150px;
     margin-top: 10px;
     background-color: black;
     color: wheat;
     outline: none;
     border: solid 1px wheat;
-}
-.campText:checked{
-    background-color: wheat;
-    color: rgb( 100, 0, 0);
 }
 .campTextArea{
     margin: 10px;
@@ -107,6 +225,7 @@ button:hover{
     border: solid 1px wheat;
 }
 .btn_salvar{
+    border-radius:0 0 13.5px 13.5px ;
     width: 500px;
     background: linear-gradient(black,rgb(29, 29, 29),black);
     color: wheat;
@@ -119,7 +238,41 @@ button:hover{
     box-shadow: 0 0 20px 0.5px  white;
 }
 
+/* BOTÃO PARA ARQUIVO */
+
+input[type=file]{
+    display: none;
+}
+label{
+    border-radius: 15px;
+    padding: 5px 5px;
+    width: 160px;
+    background: linear-gradient(black,rgb(29, 29, 29),black);
+    color: wheat;
+    text-transform: uppercase;
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid wheat;
+}
+label:hover{
+    background: linear-gradient(wheat,white,wheat);
+    color: black;
+    box-shadow: 0 0 20px 0.5px  white;
+}
+span.text1, span.text2, span.textGenero{
+    display: inline-block;
+    text-align: right;
+    color: wheat;
+}
+
+/* FIM DE BOTÃO PARA ARQUIVO */
+
 /* FORMULARIO ADD FILME */
+
+
 /* TABELA LISTA FILMES */
 .tbExibicao{
     width: 100%;
@@ -134,20 +287,11 @@ button:hover{
     background-color: wheat;
     color: rgb( 100, 0, 0);
 }
-.celulaDescricao{
-    word-break: break-all;
-    min-width: 120px;
-    max-width: 120px;
+.celulaImagem{
+    width: 50px;
+    height: 50px;
 }
 /* FIM TABELA LISTA FILMES */
 
 
 /* FIM PAGINA GERENCIAR FILMES*/
-
-/* FILME INTERNO */
-.exibirFilmeInterno{
-    color: wheat;
-}
-.exibirFilmeInterno img{
-    width: 500px;
-}

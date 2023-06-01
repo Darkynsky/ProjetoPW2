@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 31-Maio-2023 às 19:35
+-- Tempo de geração: 22-Maio-2023 às 13:39
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `tbcontato` (
   `assuntoContato` varchar(400) DEFAULT NULL,
   `mensagemContato` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`idContato`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,14 @@ CREATE TABLE IF NOT EXISTS `tbfilmes` (
   `imagemInterna` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idFilmes`),
   KEY `genero` (`genero`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `tbfilmes`
+--
+
+INSERT INTO `tbfilmes` (`idFilmes`, `filme`, `diretor`, `duracao`, `descricao`, `classificacao`, `anoLancamento`, `genero`, `imagemPrincipal`, `imagemInterna`) VALUES
+(26, 'Resident Evil', 'gafgag', '120', 'gagagagaga', '16+', '2012', 'Terror', '', '');
 
 -- --------------------------------------------------------
 
@@ -84,9 +91,20 @@ DROP TABLE IF EXISTS `tb_genero`;
 CREATE TABLE IF NOT EXISTS `tb_genero` (
   `idGenero` int NOT NULL AUTO_INCREMENT,
   `genero` varchar(100) DEFAULT NULL,
-  `imagemGenero` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`idGenero`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `tb_genero`
+--
+
+INSERT INTO `tb_genero` (`idGenero`, `genero`) VALUES
+(1, 'Comédia'),
+(2, 'Ação'),
+(3, 'Terror'),
+(4, 'Romance'),
+(5, 'Ficção'),
+(6, 'Drama');
 
 -- --------------------------------------------------------
 
@@ -101,7 +119,14 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
   `email` varchar(150) DEFAULT NULL,
   `senha` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `tb_usuario`
+--
+
+INSERT INTO `tb_usuario` (`id`, `usuario`, `email`, `senha`) VALUES
+(11, 'tester', 'tester@', '123456');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

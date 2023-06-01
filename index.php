@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="ico.ico"/>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script defer="defer" src="config.js"></script>
     <title>LOGIN</title>

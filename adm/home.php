@@ -2,8 +2,6 @@
 
 <!-- EXIBIDOR DE FILMES -->
 
-    
-
 <div class="bannerADM">
     <div class="bannerSubADM">
         <img src="../img/home/novo.png" alt="">
@@ -11,37 +9,27 @@
 </div>
 
 <div class="containerPHP">
-<div class="conteudoPHP">
+    <div class="conteudoPHP">
 
-<?php
+        <?php
         $stmt = $pdo->prepare("select * from tbFilmes");	
         $stmt ->execute();
         
         while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
     ?>
 
-
-<a href="filme-interno.php?id=<?php echo $row[0]; ?> ">
-    <figure>
-        <img src="<?php echo $row[8]; ?>"/>
-        <figcaption>
-            <h1>
+        <a href="filme-interno.php?id=<?php echo $row[0]; ?> ">
+            <figure>
+                <img src="<?php echo $row[8]; ?>"/>
                 <?php echo $row[1]; ?>
-            </h1>
-            <p>
                 <?php echo $row[3]; ?>
-            </p>
-        </figcaption>
-    </figure>
-</a>
+            </figure>
+        </a>
 
+        <?php }	?>
 
-<?php }	?>
-
-</div>
+    </div>
 </div>
 <!-- FIM EXIBIDOR DE FILMES -->
-
-
 
 <?php include("elementos_da_pagina/rodape.php") ?>

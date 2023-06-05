@@ -10,15 +10,15 @@
 
         if($erroImgMarcGenero==0){
             if(is_uploaded_file($arqINomeTempGenero)){
-                if(move_uploaded_file($arqINomeTempGenero,"../img/capas_generos/". $arqINomeGenero)){
+                if(move_uploaded_file($arqINomeTempGenero,"img/capas_generos/". $arqINomeGenero)){
                     $caminhoIGenero = $arqINomeGenero;
 
                     $generoAdd = $_POST['txAddGenero'];
     
-                    include("../conexao.php");
+                    include("conexao.php");
 
                     $stmt = $pdo->prepare("insert into tb_genero 
-                    values(null,'$generoAdd', '../img/capas_generos/$arqINomeGenero')");	    
+                    values(null,'$generoAdd', 'img/capas_generos/$arqINomeGenero')");	    
 	                $stmt ->execute();    
 
                     header("location:addfilme.php"); 

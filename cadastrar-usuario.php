@@ -9,6 +9,6 @@
     values(null,'$userLogin','$email','$userSenha')");	    
 	$stmt ->execute();    
 
-    header("location:index.php");    
+    header("location:login.php");    
     
 ?>

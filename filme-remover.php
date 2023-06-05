@@ -4,7 +4,7 @@
 
     //echo $id;
 
-    include("../conexao.php");
+    include("conexao.php");
     
     $stmt = $pdo->prepare("delete from tbfilmes where idFilmes = $id");	    
 	$stmt ->execute();    

@@ -2,12 +2,21 @@
     font-family: Broadway;
     src: url(../font/Broadway.ttf);
 }
+a{
+    text-decoration:none;
+}
 
 
 
 body{
-    margin: auto;
-    background-color: black;
+    margin: 0;
+    background: url(../img/background01.png) no-repeat;
+    background-size: cover;    
+    background-position: center;    
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 #totalPage{
     width: 100%;
@@ -126,8 +135,7 @@ button:hover{
     height: 323px;
     float: left;
     background-color: rgb(100, 0, 0);
-    transition: 1.5s;
-    
+    transition: 1.5s;    
 }
 
 .tb_exibeHomeIMG:hover{    
@@ -281,15 +289,37 @@ span.text1, span.text2, span.textGenero{
     margin-right: auto;
     background-color: rgb( 100, 0, 0);
     color: wheat;
-    border: solid 1px wheat;
+    border: solid 1px wheat;    
 }
+.tbExibicao thead th {
+    background-color: rgb( 100, 0, 0);
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+}
+.tbExibicao td:last-child {
+    text-align: center;
+}
+.tbExibicao tr.celula:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.celulaDescricao {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .celula{
     background-color: wheat;
     color: rgb( 100, 0, 0);
 }
-.celulaImagem{
-    width: 50px;
-    height: 50px;
+.celulaImagem {
+    max-width: 50px;
+    max-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /* FIM TABELA LISTA FILMES */
 

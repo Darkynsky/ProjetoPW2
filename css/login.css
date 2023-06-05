@@ -143,4 +143,31 @@ h4{
     box-shadow: 0 0 20px 0.5px  wheat;
 }
 
+/* MENU */
 
+.menuTop{
+    text-align: center;
+    border:solid 2px rgb( 100, 0, 0);
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(rgb(39,39,39),wheat ,rgb(39,39,39),wheat , rgb(39, 39, 39), wheat, rgb(39,39,39), wheat, rgb(39,39,39));
+    box-shadow: 0 0 20px 0.5px  wheat;
+}
+button{    
+    cursor: pointer;
+    margin: 10px;
+    width: auto;
+    outline: none;
+    border: solid 2px  rgb( 100, 0, 0);
+    border-radius: 20px;
+    background-color:black; 
+    font-size: 20px;    
+    color:  wheat;
+    height: 30px;
+}
+button:hover{
+    border: solid 2px  wheat;
+    background: linear-gradient(wheat,white,wheat);
+    color: black;
+    box-shadow: 0 0 20px 0.5px  white;
+    transition: 1.6s;
+}

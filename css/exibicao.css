@@ -20,15 +20,17 @@ figure{
     border-radius: 15px;
     border: solid 1px rgb(100, 0, 0);
     margin: 10px;
-    font-size: 19px;
+    font-size: 14px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     width: 200px;
-    height: auto;
+    height: 323px;
     float: left;
     background-color: rgb(100, 0, 0);
     transition: 1.5s;
     text-align: center;
     color: wheat;
+    overflow: hidden;
+    text-overflow: ellipsis;
     
 }
 
@@ -56,6 +58,7 @@ figure img:hover{
     display: flex;
     justify-content: center;
     margin: 2%;
+    background-color: black;
     
 }
 
@@ -69,7 +72,9 @@ figure img:hover{
     border-radius: 15px;
     color: wheat;
     width: 800px;
+    height: 70vh;
     box-shadow: 0 0 10px 0.5px rgb(100, 0, 0);
+    background: rgba(0, 0, 0, 0.9);
     
 }
 .exibirFilmeInterno p img{
@@ -85,7 +90,7 @@ figure img:hover{
     text-shadow: 0 0 30px #fff;
   }
 .justify-text {
-    height: auto;
+    height: 150px;
     background-color: rgb(100, 0, 0);
     text-align: justify;
     padding: 2%;

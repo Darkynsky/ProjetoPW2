@@ -17,7 +17,7 @@
 
         if($erroImgMarcI==0 && $erroImgMarcP==0){
             if(is_uploaded_file($arqINomeTempI) && is_uploaded_file($arqINomeTempP)){
-                if(move_uploaded_file($arqINomeTempI,"../img/filmes/interna/". $arqINomeI) && move_uploaded_file($arqINomeTempP,"../img/filmes/". $arqINomeP)){
+                if(move_uploaded_file($arqINomeTempI,"img/filmes/interna/". $arqINomeI) && move_uploaded_file($arqINomeTempP,"img/filmes/". $arqINomeP)){
                     $caminhoII = $arqINomeI;
                     $caminhoIP = $arqINomeP;
                     
@@ -29,10 +29,10 @@
                     $anoL = $_POST['txAnoL'];   
                     $genero = $_POST['txGenero'];
     
-                    include("../conexao.php");
+                    include("conexao.php");
 
                     $stmt = $pdo->prepare("insert into tbfilmes 
-                    values(null,'$filme', '$diretor', '$duracao', '$descricao', '$classificacao','$anoL','$genero','../img/filmes/$arqINomeP','../img/filmes/interna/$arqINomeI' )");	    
+                    values(null,'$filme', '$diretor', '$duracao', '$descricao', '$classificacao','$anoL','$genero','img/filmes/$arqINomeP','img/filmes/interna/$arqINomeI' )");	    
 	                $stmt ->execute();    
 
                     header("location:addfilme.php");

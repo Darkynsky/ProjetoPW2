@@ -36,6 +36,7 @@
                 <input type="text" placeholder="Ano de Lançamento" name="txAnoL" class="campText"/>
 
                 <select name="txGenero" class="campText">
+                <option value="" class="campText"></option>
                     <?php
                     $stmt = $pdo->prepare("select * from tb_genero");
                     $stmt ->execute();
@@ -88,6 +89,7 @@
                 <input type="text" placeholder="Ano de lançamento" name="txAnoL" class="campText" value="<?php echo @$_GET['ano']; ?>"/>
 
                 <select name="txGenero" class="campText">
+                    <option value="" class="campText"></option>
                     <?php
                     $stmt = $pdo->prepare("select * from tb_genero");
                     $stmt ->execute();
@@ -102,19 +104,19 @@
                 <table>
                     <tr>
                         <td>
-                            <input type="file" name="arqimageP" id="arqimageP" value="<?php echo @$_GET['imagemPrincipal']; ?>"/>
-                            <label for="arqimageP">Imagem Principal</label>
+                            <input type="file" name="arqimageP" id="arqimagePEdit" value="<?php echo @$_GET['imagemPrincipal']; ?>"/>
+                            <label for="arqimagePEdit">Imagem Principal</label>
                         </td>
                         <td>
-                            <span class="text1">nenhuma imagem escolhida....</span>
+                            <span class="text3">nenhuma imagem escolhida....</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="file" name="arqimageI" id="arqimageI" value="<?php echo @$_GET['imagemInterna']; ?>"/>
-                            <label for="arqimageI">Imagem Interna</label></th>
+                            <input type="file" name="arqimageI" id="arqimageIEdit" value="<?php echo @$_GET['imagemInterna']; ?>"/>
+                            <label for="arqimageIEdit">Imagem Interna</label></th>
                         <td>
-                            <span class="text2">nenhuma imagem escolhida....</span>
+                            <span class="text4">nenhuma imagem escolhida....</span>
                         </td>
                     </tr>
                 </table>       
@@ -162,12 +164,16 @@
                     echo "<td> $row[5] </td>";											
                     echo "<td> $row[6] </td>";											
                     echo "<td> $row[7] </td>";											
-                    echo "<td> $row[8]<img src='$row[8]' class='celulaImagem'> </td>";											
-                    echo "<td> $row[9]<img src='$row[9]' class='celulaImagem'> </td>";
+                    echo "<td class='celulaImagem'> $row[8] </td>";											
+                    echo "<td class='celulaImagem'> $row[9] </td>";
                     echo "<td> 
                             <a href='?idFilme=$row[0]&filme=$row[1]&diretor=$row[2]&duracao=$row[3]&descricao=$row[4]
-                            &classificacao=$row[5]&ano=$row[6]&genero=$row[7]'>Editar</a>
-                            <a href='filme-remover.php?id=$row[0]'> Remover </a>
+                            &classificacao=$row[5]&ano=$row[6]&genero=$row[7]&imagemPrincipal=$row[8]&imagemInterna=$row[9]'>
+                                <img src='img/icon/editar.png' style='width: 20px'>
+                            </a>
+                            <a href='filme-remover.php?id=$row[0]'> 
+                                <img src='img/icon/remover.png' style='width: 20px'>
+                            </a>
                           </td>";
                   echo "</tr>";
                 }	
@@ -175,7 +181,7 @@
         </tbody>
     </table>
     <!-- FIM LISTA EXIBIR FILMES -->
-</div>
+    </div>
 </div>
 
 <?php include("elementos_da_pagina/rodape.php") ?>

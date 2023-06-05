@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `tbcontato` (
   `assuntoContato` varchar(400) DEFAULT NULL,
   `mensagemContato` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`idContato`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `tbfilmes` (
   `filme` varchar(100) DEFAULT NULL,
   `diretor` varchar(100) DEFAULT NULL,
   `duracao` varchar(100) DEFAULT NULL,
-  `descricao` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `descricao` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `classificacao` varchar(100) DEFAULT NULL,
   `anoLancamento` varchar(100) DEFAULT NULL,
   `genero` varchar(20) DEFAULT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `tbfilmes` (
   `imagemInterna` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idFilmes`),
   KEY `genero` (`genero`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `tbfilmes`
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `tb_adm` (
   `email` varchar(150) DEFAULT NULL,
   `senha` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -91,8 +91,9 @@ DROP TABLE IF EXISTS `tb_genero`;
 CREATE TABLE IF NOT EXISTS `tb_genero` (
   `idGenero` int NOT NULL AUTO_INCREMENT,
   `genero` varchar(100) DEFAULT NULL,
+  `imagemGenero` varchar(3000) DEFAULT NULL,
   PRIMARY KEY (`idGenero`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `tb_genero`
@@ -119,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
   `email` varchar(150) DEFAULT NULL,
   `senha` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `tb_usuario`

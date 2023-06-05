@@ -30,6 +30,7 @@
     $classificacao = $_POST['txClassificacao'];
     $anoL = $_POST['txAnoL'];   
     $genero = $_POST['txGenero'];
+    $trailer = $_POST['txTrailer'];
     
     include("conexao.php");
 
@@ -43,7 +44,8 @@
         anoLancamento='$anoL',
         genero='$genero',
         imagemPrincipal='img/filmes/$arqINomeP',
-        imagemInterna='img/filmes/interna/$arqINomeI'
+        imagemInterna='img/filmes/interna/$arqINomeI',
+        trailer='$trailer'
         where idFilmes ='$idFilmes';
         ");	 
 		    

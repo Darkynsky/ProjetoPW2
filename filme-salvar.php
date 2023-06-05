@@ -28,11 +28,12 @@
                     $classificacao = $_POST['txClassificacao'];
                     $anoL = $_POST['txAnoL'];   
                     $genero = $_POST['txGenero'];
+                    $trailer = $_POST['txTrailer'];
     
                     include("conexao.php");
 
                     $stmt = $pdo->prepare("insert into tbfilmes 
-                    values(null,'$filme', '$diretor', '$duracao', '$descricao', '$classificacao','$anoL','$genero','img/filmes/$arqINomeP','img/filmes/interna/$arqINomeI' )");	    
+                    values(null,'$filme', '$diretor', '$duracao', '$descricao', '$classificacao','$anoL','$genero','img/filmes/$arqINomeP','img/filmes/interna/$arqINomeI','$tailer' )");	    
 	                $stmt ->execute();    
 
                     header("location:addfilme.php");

@@ -18,7 +18,7 @@
                             <span class="textGenero">nenhuma imagem escolhida....</span>
                         </td>
                         <td>
-                            <input type="submit" value="ADD GENERO"/>
+                            <input type="submit" value="ADD GENERO" class="btn_addGenero"/>
                         </td>
                     </tr>
             </table>
@@ -70,6 +70,8 @@
                     
 
                 <textarea placeholder="Descrição do filme" name="txDescricao" class="campTextArea"></textarea><br/>
+                
+                <textarea placeholder="Link do Trailer" name="txTrailer" class="campTextTrailer"></textarea><br/>
                 <input type="submit" value="SALVAR FILME" class="btn_salvar"/>
             </form>
         </div>
@@ -124,6 +126,10 @@
                 <textarea placeholder="Descrição do filme" name="txDescricao" class="campTextArea">
                     <?php echo @$_GET['descricao']; ?> 
                 </textarea><br/>
+
+                <textarea placeholder="Link do Trailer" name="txTrailer" class="campTextTrailer">
+                    <?php echo @$_GET['linkTrailer']; ?> 
+                </textarea><br/>
                 <input type="submit" value="ATUALIZAR FILME" class="btn_salvar"/>
 
             </form>
@@ -168,7 +174,7 @@
                     echo "<td class='celulaImagem'> $row[9] </td>";
                     echo "<td> 
                             <a href='?idFilme=$row[0]&filme=$row[1]&diretor=$row[2]&duracao=$row[3]&descricao=$row[4]
-                            &classificacao=$row[5]&ano=$row[6]&genero=$row[7]&imagemPrincipal=$row[8]&imagemInterna=$row[9]'>
+                            &classificacao=$row[5]&ano=$row[6]&genero=$row[7]&imagemPrincipal=$row[8]&imagemInterna=$row[9]&trailer=$row[10]'>
                                 <img src='img/icon/editar.png' style='width: 20px'>
                             </a>
                             <a href='filme-remover.php?id=$row[0]'> 

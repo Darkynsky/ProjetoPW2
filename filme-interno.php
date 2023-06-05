@@ -23,6 +23,13 @@
 				<img src="<?php echo $row[9]; ?>" align="left"/>                        
             	<?php echo $row[4]; ?>
 			</p>
+            <p><iframe
+                    src="<?php echo $row[10]; ?>"    
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen="allowfullscreen">
+                </iframe>
+            </p>
         </div>
         
     <?php }	?>

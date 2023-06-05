@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22-Maio-2023 às 13:39
+-- Tempo de geração: 05-Jun-2023 às 19:24
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `tbfilmes` (
   `genero` varchar(20) DEFAULT NULL,
   `imagemPrincipal` varchar(1000) DEFAULT NULL,
   `imagemInterna` varchar(100) DEFAULT NULL,
+  `trailer` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`idFilmes`),
   KEY `genero` (`genero`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -63,8 +64,9 @@ CREATE TABLE IF NOT EXISTS `tbfilmes` (
 -- Extraindo dados da tabela `tbfilmes`
 --
 
-INSERT INTO `tbfilmes` (`idFilmes`, `filme`, `diretor`, `duracao`, `descricao`, `classificacao`, `anoLancamento`, `genero`, `imagemPrincipal`, `imagemInterna`) VALUES
-(26, 'Resident Evil', 'gafgag', '120', 'gagagagaga', '16+', '2012', 'Terror', '', '');
+INSERT INTO `tbfilmes` (`idFilmes`, `filme`, `diretor`, `duracao`, `descricao`, `classificacao`, `anoLancamento`, `genero`, `imagemPrincipal`, `imagemInterna`, `trailer`) VALUES
+(27, 'Resident Evil: O Hóspede Maldito', 'Paul W. S. Anderson', '1h40m', '                                                                                                                                                                                    Alice e Rain Ocampo têm a missão de destruir um laboratório genético operado pela poderosa corporação Umbrella, um dos maiores conglomerados do mundo, onde um vírus foi disseminado, matando seu criador e ressurgindo como uma criatura demoníaca, que sente uma fome incontrolável e transforma todas as suas vítimas em zumbis. O time tem apenas três horas para evitar que o vírus invada a Terra.                                                                                                                                                                                                                                                                                                                                                                                                     \r\n                ', '16 anos', '2002', '', 'img/filmes/9vJX0Q9LSoOlTio8cTAm2ms0sWz.jpg', 'img/filmes/interna/re1-movie-alice.jpg', 'https://www.youtube.com/embed/eEGDRSYEd0E\"'),
+(28, 'Resident Evil 2: Apocalipse', 'Alexander Witt', '1h34m', '                                        A heroína Alice tenta livrar Raccoon City de um segundo ataque de zumbis, mas a diabólica Umbrella Corporation e os militares têm uma nova arma secreta. Os sobreviventes Jill Valentine, Carlos Oliviera e Nicholai lutam ao lado de Alice contra um novo e melhorado Matt Addison de codinome Nemesis.                                                                          \r\n                ', '16 anos', '2004', 'Terror', 'img/filmes/resident_evil_apocalypse_poster.webp', 'img/filmes/interna/20201212_residentevil2_2.jpg', 'https://www.youtube.com/embed/sT6N__M_glo');
 
 -- --------------------------------------------------------
 
@@ -99,13 +101,8 @@ CREATE TABLE IF NOT EXISTS `tb_genero` (
 -- Extraindo dados da tabela `tb_genero`
 --
 
-INSERT INTO `tb_genero` (`idGenero`, `genero`) VALUES
-(1, 'Comédia'),
-(2, 'Ação'),
-(3, 'Terror'),
-(4, 'Romance'),
-(5, 'Ficção'),
-(6, 'Drama');
+INSERT INTO `tb_genero` (`idGenero`, `genero`, `imagemGenero`) VALUES
+(7, 'Terror', 'img/capas_generos/terror.png');
 
 -- --------------------------------------------------------
 

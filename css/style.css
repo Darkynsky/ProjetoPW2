@@ -182,15 +182,32 @@ button:hover{
     margin-right: auto;
 }
 .campTextGenero{
-    border-radius: 15px;
-    height: 25px;
+    border-radius:  10px 0 0 10px;
+    height: 50px;
     width: 150px;
     background-color: black;
     color: wheat;
+    font-size: 20px;
     outline: none;
     border: solid 1px wheat;
 
 }
+.btn_addGenero{
+    background-color: black;
+    color: wheat;
+    border: 1px solid wheat;
+    border-radius:  0 10px 10px 0;
+    height: 50px;
+    transition: 1s;   
+}
+.btn_addGenero:hover{
+    background-color: white;
+    color: rgb( 100, 0, 0);
+    border: 1px solid wheat;
+    transition: 0.1s; 
+    box-shadow: 0 0 20px 0.5px  white;  
+}
+
 
 /* FIM ADD GENERO*/
 
@@ -227,6 +244,16 @@ button:hover{
     max-width: 470px;
     min-height: 100px;
     max-height: 100px;
+    background-color: black;
+    color: wheat;
+    outline: none;
+    border: solid 1px wheat;
+}
+.campTextTrailer{
+    min-width: 470px;
+    max-width: 470px;
+    min-height: 30px;
+    max-height: 30px;
     background-color: black;
     color: wheat;
     outline: none;

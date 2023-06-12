@@ -15,7 +15,7 @@
                             <label for="arqimageGenero">Imagem Genero</label>
                         </td>
                         <td>
-                            <span class="textGenero">nenhuma imagem escolhida....</span>
+                            <span class="textGenero">nenhuma imagem escolhida</span>
                         </td>
                         <td>
                             <input type="submit" value="ADD GENERO" class="btn_addGenero"/>
@@ -36,13 +36,13 @@
                 <input type="text" placeholder="Ano de Lançamento" name="txAnoL" class="campText"/>
 
                 <select name="txGenero" class="campText">
-                <option value="" class="campText"></option>
+                <option value="" class="campOption"></option>
                     <?php
                     $stmt = $pdo->prepare("select * from tb_genero");
                     $stmt ->execute();
                     while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
                         ?>
-                        <option value="<?php echo $row['genero'] ?>" class="campText">
+                        <option value="<?php echo $row['genero'] ?>" class="campOption">
                         <?php echo $row['genero'] ?>
                     </option>
                     <?php }	?>
@@ -91,13 +91,13 @@
                 <input type="text" placeholder="Ano de lançamento" name="txAnoL" class="campText" value="<?php echo @$_GET['ano']; ?>"/>
 
                 <select name="txGenero" class="campText">
-                    <option value="" class="campText"></option>
+                    <option value="" class="campOption"></option>
                     <?php
                     $stmt = $pdo->prepare("select * from tb_genero");
                     $stmt ->execute();
                     while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
                         ?>
-                        <option value="<?php echo $row['genero'] ?>" class="campText">
+                        <option value="<?php echo $row['genero'] ?>" class="campOption">
                         <?php echo $row['genero'] ?>
                     </option>
                     <?php }	?>

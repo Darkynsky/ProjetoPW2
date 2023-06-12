@@ -9,8 +9,10 @@
                     while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
             ?>
             <div class="tb_exibeGeneroIMG">
-                <?php echo $row[1]; ?>        
-                <img src="<?php echo $row[2]; ?>" />   
+                <a href="genero-interno.php?genero=<?php echo urlencode($row[1]); ?>">
+                    <?php echo $row[1]; ?>        
+                    <img src="<?php echo $row[2]; ?>" />   
+                </a>
             </div>
             <?php }	?>
         </div>

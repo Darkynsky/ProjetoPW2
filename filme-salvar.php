@@ -33,7 +33,7 @@
                     include("conexao.php");
 
                     $stmt = $pdo->prepare("insert into tbfilmes 
-                    values(null,'$filme', '$diretor', '$duracao', '$descricao', '$classificacao','$anoL','$genero','img/filmes/$arqINomeP','img/filmes/interna/$arqINomeI','$tailer' )");	    
+                    values(null,'$filme', '$diretor', '$duracao', '$descricao', '$classificacao','$anoL','$genero','img/filmes/$arqINomeP','img/filmes/interna/$arqINomeI','$trailer' )");	    
 	                $stmt ->execute();    
 
                     header("location:addfilme.php");

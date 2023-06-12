@@ -13,3 +13,4 @@ document.querySelector("#arqimageIEdit").addEventListener('change', function(){
 document.querySelector("#arqimageGenero").addEventListener('change', function(){
     document.querySelector('.textGenero').textContent = this.files[0].name;
 });
+
